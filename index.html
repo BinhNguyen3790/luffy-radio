@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Radio Luffy</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <section class="container formPage form-luffy">
+    <div class="content formDesc">
+      <h1 class="head">Form Radio</h1>
+      <p>
+        A selection of Luffy forms created using HTML and CSS.<br />
+        Choose from Straw Hat Luffy, Gear Fourth Luffy, Boundman Luffy, Snakeman Luffy, Tankman Luffy.<br />
+        Each form represents a unique aspect of Luffy's character and abilities. <br />
+        The radio buttons allow users to make a single selection, indicating their preferred Luffy form.<br />
+        The design is visually appealing and responsive, ensuring a smooth user experience.
+      </p>
+    </div>
+    <div class="content formCtn">
+      <h2 class="form-title">Chose Luffy Form</h2>
+      <form action="" class="myForm luffy-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" type="text" value="" placeholder="enter name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" type="email" value="" placeholder="enter email" required>
+        </div>
+        <div class="form-group">
+          <p class="label-radio">Luffy Form:</p>
+          <div class="form-group-radio">
+            <input type="radio" value="boundman" name="luffy" class="myRadio" id="boundman" checked>
+            <label class="label-group" for="boundman">
+              <span class="radio-icon"></span>
+              <span class="label-text">
+                <span>Luffy Boundman</span><br />
+                <span>
+                  One of Luffy's Gear Fourth forms, characterized by his muscular physique and increased strength.<br />
+                  He bounces around like a rubber ball, delivering powerful punches.
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="form-group-radio">
+            <input type="radio" value="snakeman" name="luffy" class="myRadio" id="snakeman">
+            <label class="label-group" for="snakeman">
+              <span class="radio-icon"></span>
+              <span class="label-text">
+                <span>Luffy Snakeman</span><br />
+                <span>
+                  Another form of Gear Fourth, known for its agility and speed. <br />
+                  Luffy's body becomes more elongated and flexible, allowing him to move swiftly and strike from unexpected angles.
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="form-group-radio">
+            <input type="radio" value="tankman" name="luffy" class="myRadio" id="tankman">
+            <label class="label-group" for="tankman">
+              <span class="radio-icon"></span>
+              <span class="label-text">
+                <span>Luffy Tankman</span><br />
+                <span>
+                  Tankman Luffy features a significantly increased size and a round, inflated body resembling a tank.
+                  This form grants Luffy enhanced defense and offensive capabilities, allowing him to withstand heavy attacks and deliver devastating blows.
+                </span>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group form-button">
+          <button type="submit" class="form-submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="content resultBox">
+      <div class="result-close"></div>
+      <div class="result">
+        <h2 class="result-title">WANTED</h2>
+        <div class="result-img">
+          <img src="./imgs/luffy_boundman.png" alt="">
+        </div>
+        <h3 class="result-desc">DEAD OR ALIVE</h3>
+        <h3 class="result-nameCharater">MONKEY•D•LUFFY</h3>
+        <p class="result-price">$ 3,000,000,000-</p>
+        <div class="boxTtl">
+          <div class="boxTtl-left">
+            <p class="result-name">Name: </p>
+            <p class="result-email">Email: </p>
+            <p class="result-form">Luffy Form: </p>
+          </div>
+          <div class="boxTtl-right">
+            <p class="result-auth">MARINE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bgPopup"></div>
+  </section>
+
+  <script src="./js/common.js"></script>
+</body>
+
+</html>
