@@ -42,11 +42,13 @@ img {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  background-image: url(../imgs/bg_02.jpg);
+  overflow: hidden;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .label-radio {
   margin-bottom: 0.5rem;
 }
@@ -94,6 +96,7 @@ input[type="email"] {
   border-radius: 5px;
   border: 2px solid #b70013;
   color: #ea9835;
+  font-size: 16px;
 }
 input[type="text"]:hover,
 input[type="email"]:hover {
@@ -180,6 +183,7 @@ input[type="email"]:focus {
 .form-group-radio.active {
   background-color: #fff8e1;
   border: 2px solid #e19700;
+  background-image: url(../imgs/select.gif);
 }
 .form-group-radio.active .label-text span:first-child {
   color: #e38a31;
@@ -216,7 +220,7 @@ input[type="email"]:focus {
   margin: 0;
   line-height: 0.5;
   cursor: pointer;
-  background-image: url(../imgs/icon_close.png);
+  background-image: url(../imgs/icon_close.gif);
   background-repeat: no-repeat;
   background-size: contain;
   width: 30px;
@@ -275,7 +279,7 @@ input[type="email"]:focus {
 
 .formCtn {
   position: relative;
-  background-image: url(../imgs/pic_luffy_02.jpg);
+  /* background-image: url(../imgs/pic_luffy_02.jpg); */
   background-repeat: no-repeat;
   background-position: right top;
 }
@@ -284,7 +288,7 @@ input[type="email"]:focus {
   position: absolute;
   top: -70px;
   left: 0;
-  background-image: url(../imgs/pic_bg_02.gif);
+  /* background-image: url(../imgs/pic_bg_02.gif); */
   background-repeat: no-repeat;
   width: 100px;
   height: 100px;
@@ -297,7 +301,7 @@ input[type="email"]:focus {
   position: absolute;
   bottom: -15px;
   left: 0;
-  background-image: url(../imgs/icon_meme_02.png);
+  /* background-image: url(../imgs/icon_meme_02.png); */
   background-repeat: no-repeat;
   width: 150px;
   height: 115px;
@@ -311,6 +315,7 @@ input[type="email"]:focus {
     left: 80%;
   }
 }
+
 .result-title {
   text-align: center;
   font-size: 9rem;
@@ -340,7 +345,34 @@ input[type="email"]:focus {
 .result-auth {
   font-size: 3rem;
 }
+
 @media screen and (max-width: 575px) {
+  @keyframes letgo {
+    letgo {
+      left: 0%;
+    }
+    to {
+      left: 70%;
+    }
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .formPage .myForm {
+    padding: 0 0.5rem;
+  }
+
+  .formCtn {
+    background-size: 150px;
+    background-position: right 30px;
+  }
+  .formCtn:after {
+    width: 90px;
+    height: 74px;
+  }
+
   .result-title {
     font-size: 5rem;
   }
@@ -359,4 +391,90 @@ input[type="email"]:focus {
   .result-auth {
     font-size: 2rem;
   }
+}
+
+.loading-icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading-img {
+  max-width: 100px;
+}
+.loading:before {
+  content: "Loading";
+  animation: load 1s linear infinite;
+}
+
+@keyframes load {
+  0% {
+    content: "Loading";
+  }
+  33% {
+    content: "Loading.";
+  }
+  67% {
+    content: "Loading..";
+  }
+  100% {
+    content: "Loading...";
+  }
+}
+.boxCharacter {
+  position: absolute;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  max-width: 50%;
+}
+.boxCharacter.show {
+  right: 0;
+  animation: showCharacter 1s linear;
+  opacity: 1;
+}
+.boxCharacter.hide {
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+.boxCharacter .imgChar {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 90%;
+  width: auto;
+}
+
+@keyframes showCharacter {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+.videoBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(../imgs/pic_bg_01.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.videoBg.hide {
+  transition: opacity 1s ease;
+  opacity: 0;
 }
